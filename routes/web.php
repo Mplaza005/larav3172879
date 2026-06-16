@@ -24,7 +24,7 @@ Route::get('/saludo', function () {
 });
 
 
-Route::get('/saludarc',[SaludosController::class,'Saludo']);
+
 
 
 Route::get('/frm_sumar',[OperacionesController::class,'frm_sumar']);

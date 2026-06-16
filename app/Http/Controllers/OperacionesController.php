@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Add;
+
 
 class OperacionesController extends Controller
 {
@@ -18,12 +20,14 @@ class OperacionesController extends Controller
 
     public function sumar(Request $request){
 
-    $numero1=$request->numero1;
-    $numero2=$request->numero2;
+    $add=new Add();
 
-    $resultado=$numero1+$numero2;
+    $add->num1=$request->numero1;
+    $add->num2=$request->numero2;
 
-    return $resultado;
+    $add->resul=$add->num1+$add->num2;
+    $add->save();
+    return $add;
 
     }
 
