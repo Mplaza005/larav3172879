@@ -25,5 +25,10 @@ Route::get('/saludo', function () {
 
 
 Route::get('/saludarc',[SaludosController::class,'Saludo']);
-Route::get('/sumar/{num1}/{num2}',[OperacionesController::class,'sumar']);
+
+
+Route::get('/frm_sumar',[OperacionesController::class,'frm_sumar']);
+Route::post('/sumar',[OperacionesController::class,'sumar'])->name('sumar.store');
+
+
 Route::get('/restar/{num1}/{num2}',[OperacionesController::class,'restar']);

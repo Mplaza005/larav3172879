@@ -9,13 +9,26 @@ class OperacionesController extends Controller
 
 
 
-    public function sumar($num1, $num2)
+    public function frm_sumar()
     {
 
-        $resultado = $num1 + $num2;
+        return view('frm_sumar');
 
-        return "El resultado de la suma es: " . $resultado;
     }
+
+    public function sumar(Request $request){
+
+    $numero1=$request->numero1;
+    $numero2=$request->numero2;
+
+    $resultado=$numero1+$numero2;
+
+    return $resultado;
+
+    }
+
+
+
 
     public function restar($num1, $num2)
     {
@@ -24,4 +37,8 @@ class OperacionesController extends Controller
 
         return "El resultado de la resta es: " . $resultado;
     }
+
+
+
+
 }
