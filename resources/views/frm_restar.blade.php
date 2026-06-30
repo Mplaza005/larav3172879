@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>FRM SUMAR</h1>
+<h1>FRM restar</h1>
 
 <form action="{{route('sumar.store')}}" method="POST" enctype="multipart/form-data">
 

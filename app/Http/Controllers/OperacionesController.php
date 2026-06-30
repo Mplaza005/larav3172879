@@ -34,12 +34,10 @@ class OperacionesController extends Controller
 
 
 
-    public function restar($num1, $num2)
+    public function restar()
     {
 
-        $resultado = $num1 - $num2;
-
-        return "El resultado de la resta es: " . $resultado;
+        return view('frm_restar');
     }
 
 
