@@ -18,6 +18,17 @@ return new class extends Migration
             $table->String('description');
             $table->integer('weigth');
             $table->integer('cant');
+
+            //creamos el campo para albergar la llave foranea
+            $table->unsignedBigInteger('user_id');
+
+            //crear la referencia
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
             $table->timestamps();
         });
     }

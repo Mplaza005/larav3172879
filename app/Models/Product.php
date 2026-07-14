@@ -16,4 +16,10 @@ class Product extends Model
         'weigth',
         'cant',
     ];
+
+    public function User(){
+        return $this->belongsTo('App\Models\User');
+    }
+
+
 }
