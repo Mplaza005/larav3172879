@@ -5,6 +5,7 @@ use App\Http\Controllers\SaludosController;
 use App\Http\Controllers\OperacionesController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ConsultasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,13 +17,15 @@ use App\Http\Controllers\ProductController;
 |
 */
 
+Route::get('/consultas/product',[ConsultasController::class,'consultasProduct']);
+Route::get('/consultas/category',[ConsultasController::class,'consultasCategory']);
 
 Route::get('/product/create',[ProductController::class,'create']);
 Route::post('/product/store',[ProductController::class,'store'])->name('product.store');
 
 
 
-
+Route::get('/category/index',[CategoryController::class,'index']);
 Route::get('/category/create',[CategoryController::class,'create']);
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
 
